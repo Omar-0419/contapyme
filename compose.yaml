@@ -1,0 +1,22 @@
+
+services: #define los servicios que ejecutará Docker Compose
+
+  db: #es el nombre que le damos a nuestro servicio de base de datos
+
+    image: postgres:17 #indica qué imagen de PostgreSQL utilizaremos.
+    container_name: contapyme-db
+    restart: unless-stopped
+
+    environment: #configura el nombre de la base de datos, el usuario y la contraseña iniciales
+      POSTGRES_DB: contapyme
+      POSTGRES_USER: contapyme
+      POSTGRES_PASSWORD: contapyme_dev_password
+
+    ports: #permite acceder al puerto de PostgreSQL desde tu computador
+      - "5432:5432"
+
+    volumes: #conserva los datos aunque el contenedor se detenga o se recree
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
