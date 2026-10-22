@@ -13,7 +13,7 @@ services: #define los servicios que ejecutará Docker Compose
       POSTGRES_PASSWORD: contapyme_dev_password
 
     ports: #permite acceder al puerto de PostgreSQL desde tu computador
-      - "5432:5432"
+      - "5434:5432"
 
     volumes: #conserva los datos aunque el contenedor se detenga o se recree
       - postgres_data:/var/lib/postgresql/data

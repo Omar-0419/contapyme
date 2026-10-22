@@ -9,9 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "dotenv": "^18.0.8",
     "next": "16.4.2",
+    "pg": "^8.23.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.2"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -22,6 +26,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typeorm-ts-node-commonjs": "^0.3.20",
     "typescript": "^5"
   }
 }
